@@ -8,3 +8,4 @@ tmp
 *.swp
 tools/.sconsign.dblite
 */tools
+c_cpp_properties.json
