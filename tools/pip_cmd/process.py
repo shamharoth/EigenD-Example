@@ -49,7 +49,7 @@ def find_spec(path, source_spec, spec):
         if os.path.exists(file):
             return file
 
-    raise PipError('cannot find specification file %s' % spec)
+    raise PipError('cannot find specification file %s (%s)' % (spec, path))
 
 def process_inheritance(klasses, name):
 

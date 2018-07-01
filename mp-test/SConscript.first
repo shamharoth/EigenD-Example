@@ -1,0 +1,29 @@
+#
+# Copyright 2012 Eigenlabs Ltd.  http://www.eigenlabs.com
+#
+# This file is part of EigenD.
+#
+# EigenD is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# EigenD is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with EigenD.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+Import('master_env')
+
+master_env.PiExternalRelease('2.1.8-community', '2.1-community', organisation='Eigenlabs Examples')
+
+master_env.PiPythonPackage(package='mptest', per_agent='plg_mptest')
+master_env.PiAgent('test', 'plg_mptest', 'test_plg',cversion='1.0.0')
+
+
+master_env.PiPackageDescription('mptest', desc='MP Test', groups=('contrib',))
+master_env.PiPackageCollection('mptest', groups=('contrib',))
